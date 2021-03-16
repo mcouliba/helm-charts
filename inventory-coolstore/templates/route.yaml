@@ -1,0 +1,20 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app: coolstore
+    app.kubernetes.io/instance: inventory
+    app.kubernetes.io/part-of: coolstore
+  name: inventory-coolstore
+spec:
+  path: /
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: inventory-coolstore
+    weight: 100
+  wildcardPolicy: None
