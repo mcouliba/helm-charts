@@ -3,7 +3,7 @@ entries:
   inventory-coolstore:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-03-16T13:58:22.094778+01:00"
+    created: "2021-04-02T14:02:41.859042+02:00"
     description: Deploy a Inventory Service
     digest: 5917a156300303dd39040f00ac7a21ac8b67ec0f7f65966ed46f145013053b3a
     name: inventory-coolstore
@@ -11,4 +11,15 @@ entries:
     urls:
     - https://mcouliba.github.io/helm-charts/inventory-coolstore-0.1.0.tgz
     version: 0.1.0
-generated: "2021-03-16T13:58:22.091751+01:00"
+  rewine-backend:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-04-02T14:02:41.859562+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 2055bbde3d7271915f5b3d0af72fa7d491bfb9f5547444e4d03522b074e4b0c6
+    name: rewine-backend
+    type: application
+    urls:
+    - https://mcouliba.github.io/helm-charts/rewine-backend-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-04-02T14:02:41.858201+02:00"

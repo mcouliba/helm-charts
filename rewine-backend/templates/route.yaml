@@ -1,0 +1,30 @@
+apiVersion: v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    labels:
+      app: backend
+      app.kubernetes.io/component: backend
+      app.kubernetes.io/instance: backend
+      app.kubernetes.io/name: java
+      app.kubernetes.io/part-of: rewine
+      app.openshift.io/runtime: java
+      app.openshift.io/runtime-version: openjdk-11-el7
+    name: backend
+  spec:
+    port:
+      targetPort: 8080-tcp
+    tls:
+      termination: edge
+    to:
+      kind: Service
+      name: backend
+      weight: 100
+    wildcardPolicy: None
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
