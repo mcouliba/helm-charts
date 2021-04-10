@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "cloud-native-java.fullname" . }}
+  labels:
+    {{- include "cloud-native-java.labels" . | nindent 4 }}
+    {{- if .Values.type }}
+    app.openshift.io/runtime: {{ .Values.type }}
+    {{- end }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "cloud-native-java.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "cloud-native-java.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          {{- with .Values.probes }}
+          livenessProbe:
+            httpGet:
+              path: {{ .liveness.path }}
+              port: http
+          {{- end }}
+          {{- with .Values.probes }}
+          readinessProbe:
+            httpGet:
+              path: {{ .readiness.path }}
+              port: http
+          {{- end }}
+          resources: {}

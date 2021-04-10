@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  cloud-native-java:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-04-10T22:46:48.193071+02:00"
+    description: A Helm chart for Kubernetes
+    digest: a12161c91542b3c18a8cb8d400fabfeba08a318c81d5b2abbbc9456732c5e2c1
+    name: cloud-native-java
+    type: application
+    urls:
+    - https://mcouliba.github.io/helm-charts/cloud-native-java-0.1.0.tgz
+    version: 0.1.0
   inventory-coolstore:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-04-02T14:02:41.859042+02:00"
+    created: "2021-04-10T22:46:48.193399+02:00"
     description: Deploy a Inventory Service
     digest: 5917a156300303dd39040f00ac7a21ac8b67ec0f7f65966ed46f145013053b3a
     name: inventory-coolstore
@@ -14,7 +25,7 @@ entries:
   rewine-backend:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-04-02T14:02:41.859562+02:00"
+    created: "2021-04-10T22:46:48.193951+02:00"
     description: A Helm chart for Kubernetes
     digest: 2055bbde3d7271915f5b3d0af72fa7d491bfb9f5547444e4d03522b074e4b0c6
     name: rewine-backend
@@ -22,4 +33,4 @@ entries:
     urls:
     - https://mcouliba.github.io/helm-charts/rewine-backend-0.1.0.tgz
     version: 0.1.0
-generated: "2021-04-02T14:02:41.858201+02:00"
+generated: "2021-04-10T22:46:48.190813+02:00"

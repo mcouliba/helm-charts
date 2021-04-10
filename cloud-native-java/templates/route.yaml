@@ -1,0 +1,17 @@
+---
+{{- $fullName := include "cloud-native-java.fullname" . -}}
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ include "cloud-native-java.fullname" . }}
+  labels:
+    {{- include "cloud-native-java.labels" . | nindent 4 }}
+spec:
+  path: /
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: {{ $fullName }}
+    weight: 100
+  wildcardPolicy: None

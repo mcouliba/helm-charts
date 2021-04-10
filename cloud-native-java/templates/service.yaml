@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "cloud-native-java.fullname" . }}
+  labels:
+    {{- include "cloud-native-java.labels" . | nindent 4 }}
+spec:
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  sessionAffinity: None
+  type: ClusterIP
+  selector:
+    {{- include "cloud-native-java.selectorLabels" . | nindent 4 }}
