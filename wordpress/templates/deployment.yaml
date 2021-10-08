@@ -72,7 +72,27 @@ items:
           tier: mariadb
       spec:
         containers:
-        - env: []
+        - env:
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: wordpress-mariadb
+                  key: database-user
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: wordpress-mariadb
+                  key: database-password
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: wordpress-mariadb
+                  key: database-root-password
+            - name: MYSQL_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: wordpress-mariadb
+                  key: database-name
           image: image-registry.openshift-image-registry.svc:5000/openshift/mariadb
           imagePullPolicy: IfNotPresent
           livenessProbe:
