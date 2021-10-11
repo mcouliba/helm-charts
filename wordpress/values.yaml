@@ -10,4 +10,4 @@ deployment:
 image:
   repository: image-registry.openshift-image-registry.svc:5000/wordpress/wordpress
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: "latest"
