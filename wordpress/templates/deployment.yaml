@@ -28,8 +28,8 @@ items:
       spec:
         containers:
         - env: []
-          image: image-registry.openshift-image-registry.svc:5000/wordpress/wordpress
-          imagePullPolicy: IfNotPresent
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: "{{ .Values.image.pullPolicy }}"
           name: wordpress
           ports:
           - containerPort: 80
@@ -45,6 +45,7 @@ items:
         securityContext: {}
         terminationGracePeriodSeconds: 30
         volumes: []
+{{- if eq .Values.deployment.mode "DEV" }}
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
@@ -135,6 +136,7 @@ items:
         securityContext: {}
         terminationGracePeriodSeconds: 30
         volumes: []
+{{- end }}
 kind: List
 metadata:
   resourceVersion: ""

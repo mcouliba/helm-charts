@@ -20,6 +20,7 @@ items:
       tier: frontend
     sessionAffinity: None
     type: ClusterIP
+{{- if eq .Values.deployment.mode "DEV" }}
 - apiVersion: v1
   kind: Service
   metadata:
@@ -43,6 +44,7 @@ items:
       tier: mariadb
     sessionAffinity: None
     type: ClusterIP
+{{- end }}
 kind: List
 metadata:
   resourceVersion: ""
