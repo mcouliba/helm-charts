@@ -9,7 +9,7 @@ deployment:
 
 image:
   repository: image-registry.openshift-image-registry.svc:5000/wordpress/wordpress
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   tag: "latest"
 
 #Encoded in Base64

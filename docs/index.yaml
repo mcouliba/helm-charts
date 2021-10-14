@@ -3,7 +3,7 @@ entries:
   cloud-native-java:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-14T17:10:20.693379+02:00"
+    created: "2021-10-14T18:15:11.980752+02:00"
     description: A Helm chart for Kubernetes
     digest: a12161c91542b3c18a8cb8d400fabfeba08a318c81d5b2abbbc9456732c5e2c1
     name: cloud-native-java
@@ -14,7 +14,7 @@ entries:
   inventory-coolstore:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-14T17:10:20.694669+02:00"
+    created: "2021-10-14T18:15:11.98153+02:00"
     description: Deploy a Inventory Service
     digest: 5917a156300303dd39040f00ac7a21ac8b67ec0f7f65966ed46f145013053b3a
     name: inventory-coolstore
@@ -25,7 +25,7 @@ entries:
   rewine-backend:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-14T17:10:20.696321+02:00"
+    created: "2021-10-14T18:15:11.982973+02:00"
     description: A Helm chart for Kubernetes
     digest: 2055bbde3d7271915f5b3d0af72fa7d491bfb9f5547444e4d03522b074e4b0c6
     name: rewine-backend
@@ -36,12 +36,12 @@ entries:
   wordpress:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-14T17:10:20.698111+02:00"
+    created: "2021-10-14T18:15:11.983536+02:00"
     description: A Helm chart for Kubernetes
-    digest: c3625fda428dd39dc597d6df977375c4099f8e1d3c60d68050ca4a97a06cedf0
+    digest: 62f66671cab1f36d133e610231d09ea1e85ad67d7b6f6efacc186c031acffaa4
     name: wordpress
     type: application
     urls:
     - https://mcouliba.github.io/helm-charts/wordpress-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-14T17:10:20.691497+02:00"
+generated: "2021-10-14T18:15:11.978241+02:00"
