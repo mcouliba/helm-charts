@@ -27,7 +27,7 @@ items:
           tier: frontend
       spec:
         containers:
-        - env:
+          - env:
             - name: DB_HOST
               value: "{{ .Values.database.host }}"
             - name: DB_USER
