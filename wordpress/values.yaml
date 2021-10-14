@@ -17,5 +17,5 @@ database:
   host: wordpress-mariadb:3306
   name: d29yZHByZXNzZGI=
   password: d29yZHByZXNz
-  database-root-password: d29yZHByZXNzLWFkbWlu
-  database-user: d29yZHByZXNz
+  rootPassword: d29yZHByZXNzLWFkbWlu
+  user: d29yZHByZXNz
