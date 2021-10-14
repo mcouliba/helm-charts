@@ -112,7 +112,7 @@ items:
                   name: wordpress-mariadb
                   key: database-name
           image: image-registry.openshift-image-registry.svc:5000/openshift/mariadb
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           livenessProbe:
             exec:
               command:
