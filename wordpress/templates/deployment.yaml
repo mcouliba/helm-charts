@@ -27,7 +27,24 @@ items:
           tier: frontend
       spec:
         containers:
-        - env: []
+        - env:
+            - name: DB_HOST
+              value: "{{ .Values.database.host }}"
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: wordpress-mariadb
+                  key: database-user
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: wordpress-mariadb
+                  key: database-password
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: wordpress-mariadb
+                  key: database-name
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: "{{ .Values.image.pullPolicy }}"
           name: wordpress

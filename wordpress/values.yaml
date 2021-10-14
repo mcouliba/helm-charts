@@ -11,3 +11,11 @@ image:
   repository: image-registry.openshift-image-registry.svc:5000/wordpress/wordpress
   pullPolicy: IfNotPresent
   tag: "latest"
+
+#Encoded in Base64
+database:
+  host: wordpress-mariadb:3306
+  name: d29yZHByZXNzZGI=
+  password: d29yZHByZXNz
+  database-root-password: d29yZHByZXNzLWFkbWlu
+  database-user: d29yZHByZXNz
